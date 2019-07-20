@@ -8,10 +8,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.practice.mypracticedemos.R;
 import com.practice.mypracticedemos.adapters.HomeListAdapter;
 import com.practice.mypracticedemos.models.Title;
+import com.practice.mypracticedemos.utils.DataUtils;
 import com.practice.mypracticedemos.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -37,8 +37,9 @@ public class MainActivity extends BaseActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                DataUtils.showSnackBar(view,
+                        "This is multiline snackbar text.This is multiline " +
+                                "snackbar text.This is multiline snackbar text.", "Action");
             }
         });
 
