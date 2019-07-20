@@ -31,6 +31,8 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+
+        <receiver android:name=".receivers.NotificationUpdateReceiver" />
     </application>
 
 </manifest>

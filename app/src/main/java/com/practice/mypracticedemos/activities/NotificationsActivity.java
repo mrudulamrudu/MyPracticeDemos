@@ -17,6 +17,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
 
 import com.practice.mypracticedemos.R;
+import com.practice.mypracticedemos.receivers.NotificationUpdateReceiver;
 
 public class NotificationsActivity extends BaseActivity implements View.OnClickListener {
 
@@ -66,6 +67,10 @@ public class NotificationsActivity extends BaseActivity implements View.OnClickL
         PendingIntent notificationPendingIntent = PendingIntent.getActivity(this,
                 NOTIFICATION_ID, intent, PendingIntent.FLAG_ONE_SHOT);
 
+        Intent actionIntent = new Intent(this, NotificationUpdateReceiver.class);
+        PendingIntent actionPendingIntent = PendingIntent.getBroadcast(this, 1, actionIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
         NotificationCompat.Builder notificationBuilder = getNotificationBuilder();
         notificationBuilder.setSmallIcon(R.drawable.ic_launcher_background)
                 .setContentTitle(getString(R.string.app_name))
@@ -73,6 +78,7 @@ public class NotificationsActivity extends BaseActivity implements View.OnClickL
                 .setColor(Color.BLUE)
                 .setStyle(new NotificationCompat.BigTextStyle().
                         bigText("Hey! you there..?"))
+                .addAction(R.drawable.ic_launcher_foreground, "Toast Me", actionPendingIntent)
                 .setContentIntent(notificationPendingIntent);
         notificationBuilder.setPriority(NotificationCompat.PRIORITY_MAX);
         notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);

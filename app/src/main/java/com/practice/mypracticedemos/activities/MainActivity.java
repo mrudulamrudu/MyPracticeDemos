@@ -12,6 +12,7 @@ import com.practice.mypracticedemos.R;
 import com.practice.mypracticedemos.adapters.HomeListAdapter;
 import com.practice.mypracticedemos.models.Title;
 import com.practice.mypracticedemos.utils.DataUtils;
+import com.practice.mypracticedemos.utils.NavigationCodes;
 import com.practice.mypracticedemos.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -53,18 +54,8 @@ public class MainActivity extends BaseActivity {
     }
 
     private void populateList(ArrayList<Title> listTitles) {
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Coordinator Layout", "coordinatorlayout"));
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Notifications", "notification"));
-        listTitles.add(new Title("Notifications", "notification"));
+        listTitles.add(new Title("Notifications", NavigationCodes.SCREEN_NOTIFICATIONS));
+        listTitles.add(new Title("Coordinator Layout", NavigationCodes.SCREEN_COORDINATOR));
+        listTitles.add(new Title("Localization", NavigationCodes.SCREEN_LOCALIZATION));
     }
 }
