@@ -10,9 +10,9 @@ public class NotificationUpdateReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        DataUtils.showToast(context,"Hey!You clicked me.");
+        DataUtils.showToast(context,"Hey! You clicked me.");
         //This is used to close the notification tray
-        Intent it = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
-        context.sendBroadcast(it);
+        Intent intentClose = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+        context.sendBroadcast(intentClose);
     }
 }

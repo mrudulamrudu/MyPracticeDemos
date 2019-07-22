@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyPracticeDemos</string>
+    <string name="action_settings">impostazioni</string>
+
+    <string name="notifications">notifiche</string>
+    <string name="create">Creare</string>
+    <string name="update">Aggiornare</string>
+    <string name="cancel">Annulla</string>
+
+    <string name="hello">Ciao</string>
+    <string name="how_ru">Come stai?</string>
+    <string name="good" translatable="false">Sto bene. Come stai ?</string>
+    <string name="bye">Addio.</string>
+    <string name="localization">Localizzazione</string>
+    <string name="change_locale">Cambia impostazioni internazionali</string>
+</resources>
