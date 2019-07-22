@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.practice.mypracticedemos.R;
-import com.practice.mypracticedemos.activities.CoordinatorLayoutActivity;
+import com.practice.mypracticedemos.activities.CoordinatorLayoutListActivity;
 import com.practice.mypracticedemos.activities.LocalizationActivity;
 import com.practice.mypracticedemos.activities.NotificationsActivity;
 import com.practice.mypracticedemos.models.Title;
@@ -76,7 +76,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     v.getContext().startActivity(intent);
                     break;
                 case NavigationCodes.SCREEN_COORDINATOR:
-                    intent = new Intent(v.getContext(), CoordinatorLayoutActivity.class);
+                    intent = new Intent(v.getContext(), CoordinatorLayoutListActivity.class);
                     v.getContext().startActivity(intent);
                     break;
             }
