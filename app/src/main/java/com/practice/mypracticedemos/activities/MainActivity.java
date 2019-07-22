@@ -57,5 +57,8 @@ public class MainActivity extends BaseActivity {
         listTitles.add(new Title("Notifications", NavigationCodes.SCREEN_NOTIFICATIONS));
         listTitles.add(new Title("Coordinator Layout", NavigationCodes.SCREEN_COORDINATOR));
         listTitles.add(new Title("Localization", NavigationCodes.SCREEN_LOCALIZATION));
+        listTitles.add(new Title("Constraint Layout", NavigationCodes.SCREEN_CONSTRAINT));
+        listTitles.add(new Title("Recyclerview", NavigationCodes.SCREEN_RECYCLERVIEW));
+        listTitles.add(new Title("EXO Player", NavigationCodes.SCREEN_RECYCLERVIEW));
     }
 }
